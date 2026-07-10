@@ -1,0 +1,147 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0a1018;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --text: #f5f5f7;
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --accent: #4db8ff;
+  --border: rgba(255, 255, 255, 0.12);
+  --max-width: 760px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f8fc;
+    --bg-card: #ffffff;
+    --text: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #0077cc;
+    --border: rgba(0, 0, 0, 0.08);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: linear-gradient(180deg, var(--bg) 0%, #121c28 100%);
+  color: var(--text);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(180deg, #f4f8fc 0%, #e8f0f8 100%);
+  }
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+header {
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.15;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 17px;
+}
+
+nav.top {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav.top a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav.top a:hover {
+  text-decoration: underline;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.card h3 {
+  margin: 18px 0 8px;
+  font-size: 16px;
+}
+
+.card p,
+.card li {
+  color: var(--text-secondary);
+}
+
+.card ul,
+.card ol {
+  padding-left: 1.2em;
+}
+
+.card li + li {
+  margin-top: 6px;
+}
+
+a {
+  color: var(--accent);
+}
+
+footer {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.contact {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
